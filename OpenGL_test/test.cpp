@@ -32,7 +32,7 @@ float radius = 15.0f;
 
 POINT mouseDownPt; // Key Point
 GLUquadricObj *anchor_1;
-GLUquadricObj *anchor_2;
+//GLUquadricObj *anchor_2;
 GLUquadricObj *anchor_3;
 
 GLvoid ReSizeGLScene(GLsizei width, GLsizei height)		// Resize And Initialize The GL Window
@@ -70,12 +70,12 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 	gluQuadricOrientation(anchor_1, GLU_OUTSIDE); // <4> 법선벡터의 방향을 물체에 대해서 바깓쪽으로 향하도록 법선벡터를 생성하라는 의미
 	gluQuadricTexture(anchor_1, GL_FALSE); // <5> 텍스쳐 맵을 적용하지 않을 것으므로 텍스쳐 맵핑 좌표를 생성하지 말라는 의미
 	
-	anchor_2 = gluNewQuadric(); 
-	gluQuadricDrawStyle(anchor_2, GLU_FILL);
-	gluQuadricNormals(anchor_2, GLU_SMOOTH); 
-	gluQuadricOrientation(anchor_2, GLU_OUTSIDE); 
-	gluQuadricTexture(anchor_2, GL_FALSE); 
-
+	//anchor_2 = gluNewQuadric(); 
+	//gluQuadricDrawStyle(anchor_2, GLU_FILL);
+	//gluQuadricNormals(anchor_2, GLU_SMOOTH); 
+	//gluQuadricOrientation(anchor_2, GLU_OUTSIDE); 
+	//gluQuadricTexture(anchor_2, GL_FALSE); 
+	
 	anchor_3 = gluNewQuadric();
 	gluQuadricDrawStyle(anchor_3, GLU_FILL);
 	gluQuadricNormals(anchor_3, GLU_SMOOTH);
@@ -93,7 +93,7 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 
 int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 {
-
+	Anchor* anchor_2 = new Anchor();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear Screen And Depth Buffer
 	glLoadIdentity();									// Reset The Current Modelview Matrix
 
@@ -154,7 +154,7 @@ int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 	glPushMatrix();
 	glTranslatef(-20.0f, 20.0f, -20.0f);
 	glColor3f(0.0f, 1.0f, 0.0f);
-	gluSphere(anchor_2, radius, 24, 24);
+	gluSphere(anchor_2->getQuadricObj(), radius, 24, 24);
 	glPopMatrix();
 
 	glPushMatrix();
