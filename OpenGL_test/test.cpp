@@ -6,8 +6,8 @@
 *		Visit My Site At nehe.gamedev.net
 */
 
-// git commit test comment
 
+// push test
 
 #include <windows.h>		// Header File For Windows
 #include <gl\gl.h>			// Header File For The OpenGL32 Library
