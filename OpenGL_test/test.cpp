@@ -90,7 +90,7 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 
 	return TRUE;										// Initialization Went OK
 }
-
+//브랜치 커밋 테스트
 int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 {
 	Anchor* anchor_2 = new Anchor(); /*TODO 이거 DrawGLScene()함수가 호출될때마다 계속 객체생성되니간 한번생성해서 쓸쑤있게 수정하자*/
