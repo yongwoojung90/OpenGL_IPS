@@ -93,7 +93,8 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 
 int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 {
-	Anchor* anchor_2 = new Anchor();
+	Anchor* anchor_2 = new Anchor(); /*TODO 이거 DrawGLScene()함수가 호출될때마다 계속 객체생성되니간 한번생성해서 쓸쑤있게 수정하자*/
+	//에잇 커밋좀 되라
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear Screen And Depth Buffer
 	glLoadIdentity();									// Reset The Current Modelview Matrix
 
