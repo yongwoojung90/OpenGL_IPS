@@ -90,7 +90,7 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 
 	return TRUE;										// Initialization Went OK
 }
-
+//브랜치 커밋 테스트
 int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 {
 	Anchor* anchor_2 = new Anchor();
