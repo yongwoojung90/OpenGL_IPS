@@ -3,7 +3,7 @@
 Anchor::Anchor()
 {
 	quadricObj = gluNewQuadric();
-	gluQuadricDrawStyle(quadricObj, GLU_FILL);
+	gluQuadricDrawStyle(quadricObj, GLU_LINE);
 	gluQuadricNormals(quadricObj, GLU_SMOOTH);
 	gluQuadricOrientation(quadricObj, GLU_OUTSIDE);
 	gluQuadricTexture(quadricObj, GL_FALSE);
